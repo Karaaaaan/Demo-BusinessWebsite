@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan Impex | Textile Manufacturing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+  position: fixed;
+  bottom: 25px;
+  right: 100px; /* 👈 moved left to avoid Tawk */
+
+  background: #25D366;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+
+
+
+body{
+  background:#f7f7f7;
+  color:#333;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:#1f2933;
+  padding:18px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h1{
+  color:#fff;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li{
+  color:#ddd;
+  cursor:pointer;
+  font-weight:500;
+}
+
+nav ul li:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h2{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 36px;
+  border-radius:30px;
+  background:#d97706;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#b45309;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:32px;
+}
+
+.section-title p{
+  color:#666;
+}
+
+/* SERVICES */
+.cards{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#1f2933;
+}
+
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.about p{
+  font-size:17px;
+  color:#555;
+}
+
+/* CONTACT */
+.contact{
+  max-width:900px;
+  margin:auto;
+}
+
+form{
+  display:grid;
+  gap:18px;
+}
+
+input, textarea{
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color:#d97706;
+}
+
+/* FOOTER */
+footer{
+  background:#1f2933;
+  color:#aaa;
+  text-align:center;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <h1>Karan Impex</h1>
+  <ul>
+    <li onclick="scrollToSection('home')">Home</li>
+    <li onclick="scrollToSection('services')">Services</li>
+    <li onclick="scrollToSection('about')">About</li>
+    <li onclick="scrollToSection('contact')">Contact</li>
+  </ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h2>Premium Yarn Dyeing & Textile Manufacturing</h2>
+  <p>Delivering quality yarn and fabric solutions with precision, consistency, and trust since 2012.</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Complete textile manufacturing solutions</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Yarn Dyeing</h3>
+      <p>Specialized yarn dyeing services ensuring uniform shades, durability, and color fastness.</p>
+    </div>
+
+    <div class="card">
+      <h3>Yarn & Fabric Manufacturing</h3>
+      <p>High-quality yarn and fabric production using advanced machinery and strict quality control.</p>
+    </div>
+
+    <div class="card">
+      <h3>Weaving & Knitting</h3>
+      <p>Precision weaving and knitting for strong, consistent, and reliable fabric output.</p>
+    </div>
+  </div>
+</section>
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-title">
+    <h2>Why Choose Us</h2>
+    <p>What makes Karan Impex different</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>✔ Consistent Quality</h3>
+      <p>Strict quality control ensures uniform shades, durability, and premium output every time.</p>
+    </div>
+
+    <div class="card">
+      <h3>✔ Modern Infrastructure</h3>
+      <p>Advanced dyeing and manufacturing machinery for efficient and reliable production.</p>
+    </div>
+
+    <div class="card">
+      <h3>✔ Timely Delivery</h3>
+      <p>We value deadlines and ensure on-time delivery without compromising quality.</p>
+    </div>
+
+    <div class="card">
+      <h3>✔ Customized Solutions</h3>
+      <p>Tailored yarn and fabric solutions to meet specific client requirements.</p>
+    </div>
+  </div>
+</section>
+<!-- PRODUCT RANGE -->
+<section id="products">
+  <div class="section-title">
+    <h2>Our Product Range</h2>
+    <p>High-quality textile products we offer</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Dyed Yarns</h3>
+      <p>High-quality dyed yarns with excellent color fastness and consistency.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cotton Yarns</h3>
+      <p>Premium cotton yarns suitable for knitting and weaving applications.</p>
+    </div>
+
+    <div class="card">
+      <h3>Blended Yarns</h3>
+      <p>Customized blended yarns designed to meet diverse textile needs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Finished Fabrics</h3>
+      <p>Durable and high-quality fabrics produced with precision and care.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-title">
+    <h2>About Us</h2>
+  </div>
+  <p>
+    Karan Impex, established in 2012, is a trusted textile manufacturing company specializing in yarn dyeing and the production of quality yarn and fabrics. We focus on delivering consistent quality, timely service, and customized textile solutions to meet diverse industry needs.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Let’s work together</p>
+  </div>
+
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Karan Impex | Established 2012</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+function submitForm(e){
+  e.preventDefault();
+  alert("Message sent successfully (Demo)");
+}
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/697b6312735ac41c3c1263f6/1jg4vm0qr';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<a 
+  href="https://wa.me/919821334859" 
+  class="whatsapp-btn" 
+  target="_blank">
+  <span>💬</span>
+  WhatsApp Us
+</a>
+
+
+
+</body>
+</html>
